@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ผู้จัดทำ | การใช้งานอินเทอร์เน็ต ป.4</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.author-page{padding:35px 0 50px}
+.author-box{max-width:760px;margin:0 auto;background:rgba(255,255,255,.97);border-radius:30px;padding:30px 24px 35px;box-shadow:0 10px 30px rgba(40,100,150,.14);text-align:center}
+.author-photo{width:230px;height:290px;margin:0 auto 22px;border-radius:24px;overflow:hidden;background:linear-gradient(135deg,#e6f6ff,#f7fbff);border:6px solid #8bcdf0;box-shadow:0 8px 20px rgba(30,120,180,.15)}
+.author-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.author-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#5da6d2;font-size:55px}
+.author-placeholder small{font-size:14px;color:#6b8195;margin-top:8px}
+.author-name{color:#17578d;font-size:30px;margin:12px 0 20px}
+.author-details{max-width:570px;margin:auto;text-align:left}
+.author-detail{background:#f2f9fe;border-radius:17px;padding:14px 18px;margin:10px 0;font-size:17px;line-height:1.6}
+.author-detail strong{color:#216c9f}
+.author-message{margin:24px auto 5px;background:#fff4c9;border-radius:18px;padding:17px;color:#5c6370;font-size:17px}
+.author-buttons{margin-top:25px;display:flex;justify-content:center;flex-wrap:wrap;gap:10px}
+@media(max-width:600px){.author-box{padding:24px 16px 28px}.author-photo{width:200px;height:255px}.author-name{font-size:25px}.author-detail{font-size:16px}}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<div class="brand"><span>🌐</span> การใช้งานอินเทอร์เน็ต ป.4</div>
+<nav>
+<a href="index.html">หน้าหลัก</a><a href="guide.html">คู่มือ</a><a href="pretest.html">ก่อนเรียน</a>
+<a href="lesson.html">บทเรียน</a><a href="activity.html">กิจกรรม</a><a href="summary.html">สรุป</a>
+<a href="posttest.html">หลังเรียน</a><a class="active" href="author.html">ผู้จัดทำ</a>
+</nav>
+</header>
+<main class="author-page">
+<div class="page-title"><h1>👨‍🏫 ผู้จัดทำ</h1><p>บทเรียนออนไลน์ เรื่อง การใช้งานอินเทอร์เน็ต ป.4</p></div>
+<section class="author-box">
+<div class="author-photo">
+<img src="author.jpg" alt="รูปผู้จัดทำ" onerror="this.style.display='none';document.getElementById('authorPlaceholder').style.display='flex';">
+<div id="authorPlaceholder" class="author-placeholder" style="display:none;">📷<small>ใส่รูปผู้จัดทำ<br>ชื่อไฟล์ author.jpg</small></div>
+</div>
+<h2 class="author-name">นายวิชญ์พล ยอดพรมทอง</h2>
+<div class="author-details">
+<div class="author-detail">👨‍💻 <strong>ผู้จัดทำ</strong><br>บทเรียนออนไลน์เพื่อการเรียนรู้</div>
+<div class="author-detail">💻 <strong>เรื่อง</strong><br>การใช้งานอินเทอร์เน็ตอย่างปลอดภัย</div>
+<div class="author-detail">🎓 <strong>กลุ่มเป้าหมาย</strong><br>นักเรียนชั้นประถมศึกษาปีที่ 4</div>
+</div>
+<div class="author-message">🌈 ขอบคุณที่ร่วมเรียนรู้ไปด้วยกัน<br>มาใช้อินเทอร์เน็ตอย่างสร้างสรรค์และปลอดภัยกันนะครับ 🌟</div>
+<div class="author-buttons">
+<a class="btn secondary" href="posttest.html">⬅ แบบทดสอบ</a>
+<a class="btn" href="index.html">🏠 หน้าหลัก</a>
+</div>
+</section>
+</main>
+</div>
+</body>
+</html>

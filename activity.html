@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="th"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>กิจกรรม</title><link rel="stylesheet" href="style.css"></head><body><div class="container">
+<header><div class="brand"><span>🌐</span> การใช้งานอินเทอร์เน็ต ป.4</div><nav>
+<a href="index.html">หน้าหลัก</a><a href="guide.html">คู่มือ</a><a href="pretest.html">ก่อนเรียน</a><a href="lesson.html">บทเรียน</a><a class="active" href="activity.html">กิจกรรม</a><a href="summary.html">สรุป</a><a href="posttest.html">หลังเรียน</a><a href="author.html">ผู้จัดทำ</a></nav></header>
+<div class="page-title"><h1>🎮 กิจกรรม</h1><p>ตอบคำถามบนหน้าเว็บได้เลย</p></div>
+<div class="card">
+<div class="activity"><h3>🕵️ ภารกิจที่ 1 : ปลอดภัยหรือไม่?</h3><p>มีคนที่ไม่รู้จักส่งข้อความมาขอชื่อ ที่อยู่ และเบอร์โทรศัพท์ นักเรียนควรทำอย่างไร?</p>
+<label><input type="radio" name="a1" value="wrong"> บอกข้อมูลให้เขา</label><label><input type="radio" name="a1" value="right"> ไม่บอกข้อมูลและปรึกษาผู้ใหญ่</label><label><input type="radio" name="a1" value="wrong"> ส่งรูปของตนเองให้</label>
+<div id="f1" class="feedback"></div></div>
+<div class="activity"><h3>🔎 ภารกิจที่ 2 : เลือกคำค้น</h3><p>ถ้าต้องการค้นหา “ประโยชน์ของต้นไม้” คำค้นใดเหมาะสมที่สุด?</p>
+<label><input type="radio" name="a2" value="wrong"> ต้นไม้ ๆ ๆ</label><label><input type="radio" name="a2" value="right"> ประโยชน์ของต้นไม้</label><label><input type="radio" name="a2" value="wrong"> อยากรู้มากช่วยหน่อย</label>
+<div id="f2" class="feedback"></div></div>
+<div class="activity"><h3>✏️ ภารกิจที่ 3 : กฎของฉัน</h3><p>พิมพ์กฎการใช้อินเทอร์เน็ตอย่างปลอดภัย 1 ข้อ</p>
+<textarea id="a3" placeholder="พิมพ์คำตอบของฉันที่นี่..."></textarea>
+<div id="f3" class="feedback"></div></div>
+<div style="text-align:center"><button class="btn green" onclick="checkActivities()">⭐ ตรวจคำตอบกิจกรรม</button></div>
+<div id="total" class="result" style="display:none"></div>
+</div></div>
+<script>
+function checkActivities(){
+ let score=0;
+ const a1=document.querySelector('input[name=a1]:checked');
+ const a2=document.querySelector('input[name=a2]:checked');
+ const f1=document.getElementById('f1'),f2=document.getElementById('f2'),f3=document.getElementById('f3');
+ [f1,f2,f3].forEach(x=>{x.style.display='block';x.className='feedback'});
+ if(a1&&a1.value==='right'){score++;f1.classList.add('correct');f1.innerHTML='✅ ถูกต้อง! ไม่ควรเปิดเผยข้อมูลส่วนตัว และควรปรึกษาผู้ใหญ่'}
+ else{f1.classList.add('incorrect');f1.innerHTML='💡 ลองคิดใหม่ ข้อมูลส่วนตัวไม่ควรให้คนแปลกหน้า'}
+ if(a2&&a2.value==='right'){score++;f2.classList.add('correct');f2.innerHTML='✅ ถูกต้อง! คำค้นสั้นและตรงกับเรื่องที่ต้องการค้นหา'}
+ else{f2.classList.add('incorrect');f2.innerHTML='💡 ลองเลือกคำค้นที่ตรงกับเรื่องที่ต้องการค้นหา'}
+ const text=document.getElementById('a3').value.trim();
+ if(text){score++;f3.classList.add('correct');f3.innerHTML='🌟 ดีมาก! การเขียนกฎของตนเองช่วยให้จดจำการใช้อินเทอร์เน็ตอย่างปลอดภัย'}
+ else{f3.classList.add('incorrect');f3.innerHTML='💡 ลองพิมพ์กฎที่คิดว่าสำคัญ 1 ข้อ'}
+ const total=document.getElementById('total');total.style.display='block';total.innerHTML='คะแนนกิจกรรม '+score+' / 3 คะแนน<br><a class="btn" href="summary.html">ไปหน้าสรุป ➜</a>';
+}
+</script></body></html>
