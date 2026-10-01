@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="th"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>หลังเรียน</title><link rel="stylesheet" href="style.css"></head><body><div class="container">
+<header><div class="brand"><span>🌐</span> การใช้งานอินเทอร์เน็ต ป.4</div><nav>
+<a href="index.html">หน้าหลัก</a><a href="guide.html">คู่มือ</a><a href="pretest.html">ก่อนเรียน</a><a href="lesson.html">บทเรียน</a><a href="activity.html">กิจกรรม</a><a href="summary.html">สรุป</a><a class="active" href="posttest.html">หลังเรียน</a><a href="author.html">ผู้จัดทำ</a></nav></header>
+<div class="page-title"><h1>📝 แบบทดสอบหลังเรียน</h1><p>จำนวน 10 ข้อ ข้อละ 1 คะแนน</p></div>
+<form id="quiz" class="card">
+<script>
+const qs=[
+["อินเทอร์เน็ตคืออะไร?",["เกมชนิดหนึ่ง","เครือข่ายที่เชื่อมต่ออุปกรณ์ต่าง ๆ","โปรแกรมวาดรูป","เครื่องพิมพ์"],1],
+["ข้อใดเป็นประโยชน์ของอินเทอร์เน็ต?",["ค้นหาความรู้","ทำให้อุปกรณ์เสีย","ทำให้ข้อมูลหาย","ทำให้คอมพิวเตอร์ช้าทุกครั้ง"],0],
+["การค้นหาข้อมูลที่ดีควรทำอย่างไร?",["ใช้คำค้นที่ชัดเจน","พิมพ์ข้อความมั่ว ๆ","ไม่ต้องตรวจสอบข้อมูล","เชื่อทุกเว็บไซต์"],0],
+["ข้อมูลใดควรเก็บเป็นความลับ?",["สีที่ชอบ","อาหารที่ชอบ","รหัสผ่าน","วิชาที่ชอบ"],2],
+["เมื่อคนแปลกหน้าขอข้อมูลส่วนตัว ควรทำอย่างไร?",["บอกข้อมูลทั้งหมด","ส่งรูปให้","หยุดสนทนาและบอกผู้ใหญ่","นัดพบคนแปลกหน้า"],2],
+["ข้อใดเป็นการใช้อินเทอร์เน็ตอย่างมีมารยาท?",["ใช้คำสุภาพ","ด่าผู้อื่น","ล้อเลียนเพื่อน","ส่งข้อความรบกวน"],0],
+["ก่อนเชื่อข้อมูลบนอินเทอร์เน็ตควรทำอะไร?",["ส่งต่อทันที","ตรวจสอบข้อมูล","เชื่อเพื่อนทันที","ไม่อ่านข้อมูล"],1],
+["หากพบลิงก์น่าสงสัยควรทำอย่างไร?",["คลิกทันที","ส่งให้เพื่อน","หยุดและปรึกษาผู้ใหญ่","กรอกข้อมูลส่วนตัว"],2],
+["รหัสผ่านควรมีลักษณะอย่างไร?",["บอกทุกคน","ใช้ชื่ออย่างเดียว","เก็บไว้เป็นความลับ","เขียนไว้ในที่สาธารณะ"],2],
+["เมื่อพบสิ่งผิดปกติบนอินเทอร์เน็ตควรทำอย่างไร?",["ไม่สนใจเสมอ","บอกผู้ปกครองหรือคุณครู","ส่งต่อให้เพื่อน","ตอบโต้ทันที"],1]
+];
+document.write(qs.map((q,i)=>`<div class="question"><b>ข้อ ${i+1}. ${q[0]}</b>${q[1].map((o,j)=>`<label><input type="radio" name="q${i}" value="${j}"> ${String.fromCharCode(65+j)}. ${o}</label>`).join("")}</div>`).join(""));
+</script>
+<div style="text-align:center"><button type="button" class="btn green" onclick="checkQuiz()">⭐ ตรวจคำตอบ</button></div>
+<div id="result" class="result" style="display:none"></div></form></div>
+<script>
+function checkQuiz(){
+let score=0;
+qs.forEach((q,i)=>{if(document.querySelector(`input[name=q${i}]:checked`)?.value==q[2])score++});
+let msg=score>=8?'🎉 เก่งมาก!':score>=5?'😊 ทำได้ดี! ลองทบทวนอีกครั้ง':'💪 ลองกลับไปอ่านบทเรียนแล้วทำใหม่';
+let r=document.getElementById('result');r.style.display='block';r.innerHTML=`คะแนน ${score} / 10 คะแนน<br>${msg}<br><a class="btn" href="author.html">ดูผู้จัดทำ ➜</a>`;
+}
+</script></body></html>

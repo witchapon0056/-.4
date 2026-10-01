@@ -1,0 +1,84 @@
+
+*{box-sizing:border-box}
+body{
+ margin:0;font-family:"Trebuchet MS","Tahoma",sans-serif;
+ color:#24405f;background:linear-gradient(180deg,#f7fbff 0%,#dff2ff 100%);
+}
+.container{width:94%;max-width:1100px;margin:auto}
+header{
+ background:#fff;padding:14px 20px;position:sticky;top:0;z-index:10;
+ box-shadow:0 3px 15px rgba(0,0,0,.08);border-radius:0 0 22px 22px;
+ display:flex;align-items:center;gap:14px;flex-wrap:wrap
+}
+.brand{font-size:25px;font-weight:800;color:#1769aa;margin-right:auto}
+.brand span{font-size:34px;vertical-align:middle}
+nav{display:flex;gap:7px;flex-wrap:wrap;justify-content:center}
+nav a{
+ text-decoration:none;color:#36536f;padding:10px 14px;border-radius:16px;
+ font-weight:700;transition:.2s
+}
+nav a:hover,nav a.active{background:#2f8edb;color:#fff}
+.hero{
+ margin:28px 0;background:linear-gradient(135deg,#dff3ff,#fff);
+ border-radius:30px;padding:45px 30px;text-align:center;
+ box-shadow:0 8px 25px rgba(45,120,180,.12)
+}
+.badge{display:inline-block;background:#fff;padding:10px 22px;border-radius:30px;color:#216aa4;font-weight:700}
+.hero h1{font-size:46px;line-height:1.25;color:#164f88;margin:25px 0 12px}
+.hero h1 span{color:#258bd2}
+.hero p{font-size:20px;line-height:1.8;max-width:800px;margin:auto;color:#58708a}
+.hero-art{font-size:65px;margin:20px 0}
+.btn{
+ display:inline-block;border:0;text-decoration:none;cursor:pointer;
+ background:#248bd4;color:#fff;padding:14px 28px;border-radius:18px;
+ font-size:18px;font-weight:800;margin:8px
+}
+.btn.secondary{background:#fff;color:#2570a9;border:2px solid #b9dff5}
+.btn.green{background:#39a66a}
+.card{
+ background:#fff;border-radius:24px;padding:28px;margin:22px 0;
+ box-shadow:0 7px 22px rgba(45,100,150,.10)
+}
+.card h2{color:#e48131;margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.small-card{background:#f5fbff;padding:22px;border-radius:20px;text-align:center}
+.small-card .icon{font-size:42px}
+.content p,.content li{font-size:18px;line-height:1.8}
+.callout{background:#fff4ca;padding:18px 22px;border-radius:18px;margin:18px 0}
+.safe{background:#e9f8ed;padding:20px;border-radius:20px}
+.activity{
+ background:#f8f4ff;border:3px dashed #aa8de5;border-radius:22px;
+ padding:25px;margin:20px 0
+}
+.activity h3{color:#6d4bb0}
+.question{background:#fff;padding:20px;border-radius:18px;margin:15px 0}
+.question label{display:block;padding:9px;border-radius:12px;margin:5px 0;cursor:pointer}
+.question label:hover{background:#eef8ff}
+input[type=text],textarea{
+ width:100%;padding:12px;border:2px solid #c7dceb;border-radius:12px;
+ font-size:17px;font-family:inherit
+}
+textarea{min-height:100px;resize:vertical}
+.feedback{margin-top:12px;padding:13px;border-radius:12px;display:none}
+.correct{background:#dff6e7;color:#176b38}
+.incorrect{background:#ffe4e4;color:#a43737}
+.result{font-size:21px;text-align:center;background:#e8f6ff;padding:20px;border-radius:20px}
+.author{text-align:center}
+.photo{
+ width:230px;height:230px;border-radius:50%;margin:10px auto 20px;
+ background:#e5f5ff;border:8px solid #72bfe9;display:flex;
+ justify-content:center;align-items:center;overflow:hidden
+}
+.photo img{width:100%;height:100%;object-fit:cover}
+.placeholder{font-size:55px;color:#58a8d5}
+footer{text-align:center;padding:28px;color:#58708a}
+.page-title{text-align:center;padding:35px 10px 10px}
+.page-title h1{color:#164f88;font-size:38px}
+@media(max-width:850px){.grid{grid-template-columns:1fr 1fr}.brand{width:100%;text-align:center;margin:0}}
+@media(max-width:600px){
+ header{justify-content:center}.brand{font-size:22px}
+ nav a{padding:8px 10px;font-size:14px}
+ .hero{padding:30px 18px}.hero h1{font-size:34px}.hero p{font-size:17px}
+ .grid{grid-template-columns:1fr}.content p,.content li{font-size:17px}
+ .btn{width:90%;margin:6px auto}
+}
